@@ -4,7 +4,22 @@
 
 脚本参考于&nbsp;&nbsp;[Debuffxb/ZAFU_DDUP](https://github.com/Debuffxb/ZAFU_DDUP)
 
-## 填写内容说明
+## 填写内容
+
+建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
+
+下载代码:
+
+- [腾讯云](https://github.com/Qyir/zafuapp-yqdj/releases/download/v1/tencentcloud.zip)
+
+- [阿里云](https://github.com/Qyir/zafuapp-yqdj/releases/download/v1/aliyun.zip)
+
+
+用文本编辑器打开 `index.js` 依据填写内容说明进行填写
+
+填写完后将 `index.js` 文件和 `node_modules` 文件夹置于根目录，然后一起打包成 `.zip` 压缩包
+
+### 填写内容说明
 
 ```javascript
 let user_info = {
@@ -31,16 +46,6 @@ let content = {
 > 经纬度获取: [百度地图](https://api.map.baidu.com/lbsapi/getpoint/index.html)<br>
 adcode 参考: [2016年统计用区划代码和城乡划分代码](http://www.mca.gov.cn/article/sj/xzqh/1980/2019/202002281436.html)<br>
 citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/incode.htm)
-
-## 使用
-
-建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
-
-下载 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` 或腾讯云 `TencentCloud_Serverless` 文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
-
-    Code 绿色按钮 -> Download ZIP
-
-修改完后将 `index.js` 文件和 `node_modules` 文件夹置于根目录，然后一起打包成 `.zip` 压缩包。
 
 ### 腾讯云（推荐，登录和操作都较为方便）
 
