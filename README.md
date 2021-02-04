@@ -16,7 +16,7 @@ let user_info = {
 
 let content = {
     lng: "",                              //  lng 经度，必填
-    lat: "",                              //  lat 维度，必填
+    lat: "",                              //  lat 纬度，必填
     twds: 36.5,                           //  twds 体温度数，选填
     curareaname: "XX省XX市XX县(区)",        //  curareaname 当前区域，选填，注意与经纬度相匹配
     gpsareaname: "XX省XX市XX县",           //  gpsareaname gps定位区域，选填，注意与经纬度相匹配
