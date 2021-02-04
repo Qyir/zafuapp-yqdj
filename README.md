@@ -36,27 +36,13 @@ citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/in
 
 建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
 
-下载 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` （或腾讯云 `TencentCloud_Serverless` ）文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
+下载 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` 或腾讯云 `TencentCloud_Serverless` 文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
 
     Code 绿色按钮 -> Download ZIP
 
 修改完后将 `index.js` 文件和 `node_modules` 文件夹置于根目录，然后一起打包成 `.zip` 压缩包。
 
-
-
-### 阿里云
-
->[阿里云-函数计算](https://www.aliyun.com/product/fc)
-
-1. 新建函数&nbsp;&nbsp;=>&nbsp;&nbsp;事件函数
-2. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Node.JS 12.x
-3. 函数代码配置中，选择代码包上传
-4. 进入函数后，触发器选项&nbsp;&nbsp;=>&nbsp;&nbsp;创建触发器
-5. 时间配置&nbsp;&nbsp;=>&nbsp;&nbsp;Cron表达式
-
-        0 1 16 * * *
-
-### 腾讯云
+### 腾讯云（推荐，登录和操作都较为方便）
 
 >[腾讯云-云函数](https://cloud.tencent.com/product/scf)
 
@@ -70,6 +56,18 @@ citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/in
         0 1 0 * * * *
 
 7. 部署
+
+### 阿里云
+
+>[阿里云-函数计算](https://www.aliyun.com/product/fc)
+
+1. 新建函数&nbsp;&nbsp;=>&nbsp;&nbsp;事件函数
+2. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Node.JS 12.x
+3. 函数代码配置中，选择代码包上传
+4. 进入函数后，触发器选项&nbsp;&nbsp;=>&nbsp;&nbsp;创建触发器
+5. 时间配置&nbsp;&nbsp;=>&nbsp;&nbsp;Cron表达式
+
+        0 1 16 * * *
 
 <br>
 阿里云和腾讯云都可以在相应的日志选项中查看执行结果。有能力者也可以在服务器中通过crontab等部署定时任务
