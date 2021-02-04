@@ -46,16 +46,17 @@ citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/in
 
 >[腾讯云-云函数](https://cloud.tencent.com/product/scf)
 
-1. 函数服务&nbsp;&nbsp;=>&nbsp;&nbsp;新建&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
-2. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Nodejs 12.16
-3. 函数代码&nbsp;&nbsp;=>&nbsp;&nbsp;提交方法&nbsp;&nbsp;=>&nbsp;&nbsp;本地上传zip包
-4. 触发器配置&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
-5. 触发方式&nbsp;&nbsp;=>&nbsp;&nbsp;定时触发
-6. 触发周期&nbsp;&nbsp;=>&nbsp;&nbsp;自定义触发周期
+1. 管理控制台
+2. 函数服务&nbsp;&nbsp;=>&nbsp;&nbsp;新建&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
+3. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Nodejs 12.16
+4. 函数代码&nbsp;&nbsp;=>&nbsp;&nbsp;提交方法&nbsp;&nbsp;=>&nbsp;&nbsp;本地上传zip包
+5. 触发器配置&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
+6. 触发方式&nbsp;&nbsp;=>&nbsp;&nbsp;定时触发
+7. 触发周期&nbsp;&nbsp;=>&nbsp;&nbsp;自定义触发周期
 
         0 1 0 * * * *
 
-7. 部署
+8. 部署
 
 ### 阿里云
 
