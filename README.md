@@ -36,7 +36,7 @@ citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/in
 
 建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
 
-下载根目录的 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` （或腾讯云 `TencentCloud_Serverless` ）文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
+下载 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` （或腾讯云 `TencentCloud_Serverless` ）文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
 
 修改完后将 `index.js` 文件和 `node_modules` 文件夹置于根目录，然后一起打包成 `.zip` 压缩包。
 
