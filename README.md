@@ -34,7 +34,7 @@ citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/in
 
 ## 使用
 
-建议部署前先进行一次登记，方便获取最新数据
+建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
 
 下载根目录的 `node_modules` 文件夹以及阿里云 `Aliyun_Serverless` （或腾讯云 `TencentCloud_Serverless` ）文件夹下的 `index.js` ，并对 `index.js` 文件中的相应内容进行填写。
 
