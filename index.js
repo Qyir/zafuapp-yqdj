@@ -29,8 +29,6 @@ let content = args[1];
 //     djsj: moment().valueOf(),
 // };
 
-
-
 (() => {
 
     // get token
