@@ -67,6 +67,7 @@ let content = {
         .then(response => {
             if (response.data.type !== 'success') throw new Error(response.data.content);
             console.log(response.data.content);
+            return;
         })
         .catch(err => {
             throw new Error(err);
