@@ -23,7 +23,5 @@ jobs:
     - name: Npm Install
       run: npm install
 
-    - name: Run Script
-      run: node ./index.js > ./result.log
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Script & Get Result
+      run: node ./index.js
