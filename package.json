@@ -1,0 +1,30 @@
+{
+  "name": "zafuapp-yqdj",
+  "version": "1.1.0",
+  "description": "An automated script for daily reporting of the epidemic situation of zafuapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.js",
+    "submit": "node ./index.js > ./result.log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qyir/zafuapp-yqdj.git"
+  },
+  "keywords": [
+    "zafuapp",
+    "zafu",
+    "yqdj"
+  ],
+  "author": "qyir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qyir/zafuapp-yqdj/issues"
+  },
+  "homepage": "https://github.com/Qyir/zafuapp-yqdj#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "form-data": "^4.0.0",
+    "moment": "^2.29.1"
+  }
+}
