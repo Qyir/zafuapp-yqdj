@@ -4,30 +4,25 @@ const axios = require('axios');
 const moment = require('moment');
 const FormData = require('form-data');
 
-const args = process.argv.slice(2);
+let user_info = {
+    userName: '201907030127',
+    enPassword: 'dream0540',
+    token: '',
+    stryqdj: ''
+};
 
-let user_info = JSON.parse(args[0]);
-let content = JSON.parse(args[1]);
-
-// let user_info = {
-//     userName: '201907030127',
-//     enPassword: 'dream0540',
-//     token: '',
-//     stryqdj: ''
-// };
-
-// let content = {
-//     lng: "117.68825086805556",
-//     lat: "24.00862087673611",
-//     twds: 36.5,
-//     curareaname: "福建省漳州市漳浦县",
-//     gpsareaname: "福建省漳州市漳浦县",
-//     gpsaddress: "福建省漳州市漳浦县霞美镇陂下",
-//     adcode: "",
-//     citycode: "",
-//     tbrq: moment().format('YYYY-MM-DD'),
-//     djsj: moment().valueOf(),
-// };
+let content = {
+    lng: "117.68825086805556",
+    lat: "24.00862087673611",
+    twds: 36.5,
+    curareaname: "福建省漳州市漳浦县",
+    gpsareaname: "福建省漳州市漳浦县",
+    gpsaddress: "福建省漳州市漳浦县霞美镇陂下",
+    adcode: "",
+    citycode: "",
+    tbrq: moment().format('YYYY-MM-DD'),
+    djsj: moment().valueOf(),
+};
 
 (() => {
 
@@ -72,6 +67,7 @@ let content = JSON.parse(args[1]);
         .then(response => {
             if (response.data.type !== 'success') throw new Error(response.data.content);
             console.log(response.data.content);
+            return;
         })
         .catch(err => {
             throw new Error(err);
