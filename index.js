@@ -6,8 +6,8 @@ const FormData = require('form-data');
 
 const args = process.argv.slice(2);
 
-let user_info = args[0];
-let content = args[1];
+let user_info = JSON.parse(args[0]);
+let content = JSON.parse(args[1]);
 
 // let user_info = {
 //     userName: '201907030127',
