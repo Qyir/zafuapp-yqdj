@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./index.js",
-    "submit": "node ./index.js > ./result.log"
+    "submit": "node ./index.js"
   },
   "repository": {
     "type": "git",

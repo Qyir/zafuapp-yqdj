@@ -66,10 +66,12 @@ let content = {
                 })
         })
         .then(response => {
+            console.log('three');
             if (response.data.type !== 'success') throw new Error(response.data.content);
             console.log(response.data.content);
         })
         .catch(err => {
+            console.log('found err!!!');
             throw new Error(err);
         });
 })();
