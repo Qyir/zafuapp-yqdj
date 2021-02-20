@@ -5,19 +5,19 @@ const moment = require('moment');
 const FormData = require('form-data');
 
 let user_info = {
-    userName: '201907030127',
-    enPassword: 'dream0540',
+    userName: '',
+    enPassword: '',
     token: '',
     stryqdj: ''
 };
 
 let content = {
-    lng: "117.68825086805556",
-    lat: "24.00862087673611",
+    lng: "",
+    lat: "",
     twds: 36.5,
-    curareaname: "福建省漳州市漳浦县",
-    gpsareaname: "福建省漳州市漳浦县",
-    gpsaddress: "福建省漳州市漳浦县霞美镇陂下",
+    curareaname: "XX省XX市XX县(区)",
+    gpsareaname: "XX省XX市XX县(区)",
+    gpsaddress: "XX省XX市......",
     adcode: "",
     citycode: "",
     tbrq: moment().format('YYYY-MM-DD'),
