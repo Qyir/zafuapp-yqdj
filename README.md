@@ -1,79 +1,71 @@
-# ZAFUapp 每日一报
+# ZAFUapp 每日一报 :rocket:
 
->**声明：该脚本仅供学习使用，由此产生的一切问题均自行负责，与制作者无关**
+>**:exclamation: 声明：该脚本仅供学习使用，由此产生的一切问题均自行负责，与制作者无关**
 
 脚本参考于&nbsp;&nbsp;[Debuffxb/ZAFU_DDUP](https://github.com/Debuffxb/ZAFU_DDUP)
 
-## 填写内容
+## 使用说明
 
-建议部署前先从ZAFUapp中进行一次登记，方便获取最新数据
+建议使用前先从ZAFUapp中进行一次登记，方便获取最新数据
 
-下载代码:
+1. 创建 GitHub 账户（必要 :smile: ）
+2. fork 一份到自己的仓库
 
-- [腾讯云](https://github.com/Qyir/zafuapp-yqdj/releases/download/v1/tencentcloud.zip)
+    ![Fork](./img/step0.png)
 
-- [阿里云](https://github.com/Qyir/zafuapp-yqdj/releases/download/v1/aliyun.zip)
+3. 到设置 `Settings` 中的 `Secrets` 添加自己的信息
 
+    ![Settings](img/step1.png)
 
-用文本编辑器打开 `index.js` 依据填写内容说明进行填写
+    ![Secrets](img/step2.png)
 
-填写完后将 `index.js` 文件和 `node_modules` 文件夹置于根目录，然后一起打包成 `.zip` 压缩包
+    ![Add](img/step3.png)
+
+    ![Input](img/step4.png)
 
 ### 填写内容说明
 
-```javascript
-let user_info = {
-    userName: '',    // 学号
-    enPassword: '',  // 密码
-    token: '',       // 不填
-    stryqdj: ''      // 不填
-};
+```
+    示例：
+        键名: 值
 
-let content = {
-    lng: "",                              //  lng 经度，必填
-    lat: "",                              //  lat 纬度，必填
-    twds: 36.5,                           //  twds 体温度数，选填
-    curareaname: "XX省XX市XX县(区)",        //  curareaname 当前区域，选填，注意与经纬度相匹配
-    gpsareaname: "XX省XX市XX县",           //  gpsareaname gps定位区域，选填，注意与经纬度相匹配
-    gpsaddress: "",                       //  gpsaddress 详细地址，选填
-    adcode: "",                           //  adcode 行政区划代码，选填
-    citycode: "",                         //  citycode 城市代码，选填
-    tbrq: moment().format('YYYY-MM-DD'),  //  tbrq 填报日期，moment函数生成 YYYY-MM-DD
-    djsj: moment().valueOf(),             //  djsj 登记时间 moment函数生成 毫秒级时间戳
-};
+    USERNAME: 学号
+    PASSWORD: 密码
+    LNG_LAT: 经度:纬度
+        如：118.999999999:27.33234242343（注意：经度与纬度之间用英文的冒号 : 隔开）
+    AREANAME: 区域
+        如：XX省XX市XX区（县）  （注意：应与经纬度相匹配）
+    ADDRESS: 详细地址
 ```
 
-> 经纬度获取: [百度地图](https://api.map.baidu.com/lbsapi/getpoint/index.html)<br>
-adcode 参考: [2016年统计用区划代码和城乡划分代码](http://www.mca.gov.cn/article/sj/xzqh/1980/2019/202002281436.html)<br>
-citycode 参考: [中国内地城市长途区号](http://www.zjcargo.com/tool/incode.htm)
+> 经纬度获取: [百度地图](https://api.map.baidu.com/lbsapi/getpoint/index.html)
 
-### 腾讯云（推荐，登录和操作都较为方便）
+总共需要 5 个 `secrets key`
 
->[腾讯云-云函数](https://cloud.tencent.com/product/scf)
+![Secrets Keys](img/info.png)
 
-1. 管理控制台
-2. 函数服务&nbsp;&nbsp;=>&nbsp;&nbsp;新建&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
-3. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Nodejs 12.16
-4. 函数代码&nbsp;&nbsp;=>&nbsp;&nbsp;提交方法&nbsp;&nbsp;=>&nbsp;&nbsp;本地上传zip包
-5. 触发器配置&nbsp;&nbsp;=>&nbsp;&nbsp;自定义创建
-6. 触发方式&nbsp;&nbsp;=>&nbsp;&nbsp;定时触发
-7. 触发周期&nbsp;&nbsp;=>&nbsp;&nbsp;自定义触发周期
+更新信息，如位置等，可以到相应的键名位置点击 `Update` 重新填写
 
-        0 1 0 * * * *
+![Update](img/step5.png)
 
-8. 部署
+### 查看结果
 
-### 阿里云
+1. 前往 `Actions` 部分
 
->[阿里云-函数计算](https://www.aliyun.com/product/fc)
+    ![Actions](img/step6.png)
 
-1. 新建函数&nbsp;&nbsp;=>&nbsp;&nbsp;事件函数
-2. 运行环境&nbsp;&nbsp;=>&nbsp;&nbsp;Node.JS 12.x
-3. 函数代码配置中，选择代码包上传
-4. 进入函数后，触发器选项&nbsp;&nbsp;=>&nbsp;&nbsp;创建触发器
-5. 时间配置&nbsp;&nbsp;=>&nbsp;&nbsp;Cron表达式
+2. 点击相应的执行日志，上方为最新日志
 
-        0 1 16 * * *
+    ![Log](img/step7.png)
 
-<br>
-阿里云和腾讯云都可以在相应的日志选项中查看执行结果。有能力者也可以在服务器中通过crontab等部署定时任务
+3. 点击工作任务 `build`
+
+    ![Jobs](img/step8.png)
+
+4. 在 `Run Script` 中即可以看到执行结果:sunglasses:
+
+    ![Result](img/step9.png)
+
+## LICENSE
+
+[MIT](https://opensource.org/licenses/MIT)

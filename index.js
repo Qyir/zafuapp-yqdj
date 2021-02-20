@@ -4,31 +4,29 @@ const axios = require('axios');
 const moment = require('moment');
 const FormData = require('form-data');
 
+const args = process.argv.splice(2);
+
 let user_info = {
-    userName: '',
-    enPassword: '',
     token: '',
     stryqdj: ''
 };
 
 let content = {
-    lng: "",
-    lat: "",
     twds: 36.5,
-    curareaname: "XX省XX市XX县(区)",
-    gpsareaname: "XX省XX市XX县(区)",
-    gpsaddress: "XX省XX市......",
-    adcode: "",
-    citycode: "",
+    lng: args[2].split(':')[0],
+    lat: args[2].split(':')[1],
+    curareaname: args[3],
+    gpsareaname: args[3],
+    gpsaddress: args[4],
     tbrq: moment().format('YYYY-MM-DD'),
     djsj: moment().valueOf(),
 };
 
-(() => {
+((userName, enPassword) => {
 
     // get token
     axios.post('http://app.zafu.edu.cn/app/user/login.jhtm',
-        `userName=${user_info.userName}&enPassword=${user_info.enPassword}`
+        `userName=${userName}&enPassword=${enPassword}`
         )
         .then(response => {
             if (response.data.type !== 'success') throw new Error(response.data.content);
@@ -72,4 +70,4 @@ let content = {
         .catch(err => {
             throw new Error(err);
         });
-})();
+})(args[0], args[1]);
