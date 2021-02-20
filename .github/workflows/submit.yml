@@ -23,5 +23,5 @@ jobs:
     - name: Npm Install
       run: npm install
 
-    - name: Run Script & Get Result
+    - name: Run Script
       run: node ./index.js

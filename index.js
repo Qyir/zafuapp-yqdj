@@ -54,6 +54,7 @@ let content = {
             let form = new FormData();
             form.append('stryqdj', user_info.stryqdj);
 
+            console.log('begin submit');
             // submit
             return axios.post('/vapp/yqdj/submit.jhtm',
                 form,
@@ -67,7 +68,6 @@ let content = {
         .then(response => {
             if (response.data.type !== 'success') throw new Error(response.data.content);
             console.log(response.data.content);
-            return;
         })
         .catch(err => {
             throw new Error(err);
