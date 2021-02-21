@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+  fork:
   schedule:
     - cron: '5 16 * * *'
 
