@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+  fork:
+  workflow_dispatch:
   schedule:
     - cron: '5 16 * * *'
 
