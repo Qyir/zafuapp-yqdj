@@ -22,8 +22,6 @@
 
     ![Add](img/step3.png)
 
-    ![Input](img/step4.png)
-
 ### 填写内容说明
 
 ```
@@ -40,6 +38,8 @@
 ```
 
 > 经纬度获取: [百度地图](https://api.map.baidu.com/lbsapi/getpoint/index.html)
+
+![Input](img/step4.png)
 
 总共需要 5 个 `secrets key`
 
