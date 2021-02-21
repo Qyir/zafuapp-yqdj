@@ -43,7 +43,7 @@ let content = {
                 });
         })
         .then(response => {
-            if (response.data.todaySubmitted) console.log(`今日已填报: ${content.tbrq}`);
+            if (response.data.todaySubmitted) console.log(`今日已填报: ${moment().format('YYYY-MM-DD kk:mm:ss')}`);
 
             response.data = Object.assign(response.data, content);
 
@@ -64,7 +64,7 @@ let content = {
         })
         .then(response => {
             if (response.data.type !== 'success') throw new Error(response.data.content);
-            console.log(response.data.content);
+            console.log(`${response.data.content}: ${moment().format('YYYY-MM-DD kk:mm:ss')}`);
             return;
         })
         .catch(err => {

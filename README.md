@@ -9,11 +9,12 @@
 建议使用前先从ZAFUapp中进行一次登记，方便获取最新数据
 
 1. 创建 GitHub 账户（必要 :smile: ）
-2. fork 一份到自己的仓库
+2. [本仓库](https://github.com/Qyir/zafuapp-yqdj)
+3. fork 一份到自己的仓库，进入自己的仓库（头像下拉菜单中的 Your repositories）
 
     ![Fork](./img/step0.png)
 
-3. 到设置 `Settings` 中的 `Secrets` 添加自己的信息
+4. 到设置 `Settings` 中的 `Secrets` 添加自己的信息
 
     ![Settings](img/step1.png)
 
@@ -47,6 +48,8 @@
 更新信息，如位置等，可以到相应的键名位置点击 `Update` 重新填写
 
 ![Update](img/step5.png)
+
+>体温度数默认 36.5，可以在 `index.js` 文件第 15 行的 `twds` 处自行修改
 
 ### 查看结果
 
